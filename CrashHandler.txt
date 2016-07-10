@@ -1,0 +1,58 @@
+
+
+public class CrashHandler implements UncaughtExceptionHandler {
+	private static final String TAG = "CrashHandler";
+	private static fianl boolean DEBUG = true;
+
+	private static final String PATH = Environment.getExternalStorageDirectory().getPath() + "/CrashHandler/log";
+	private static final String FILE_NAME = "crash";
+	private static final String FILE_NAME_SUFFIX = ".trace";
+
+	private static CrashHandler sInstance = new CrashHandler();
+	private UncaughtExceptionHandler mDefaultCrashHandler;
+	private Context mContext;
+
+	private CrashHandler() {}
+
+	public static CrashHandler getInstance() {
+		return sInstance;
+	}
+
+	public void init(Context context) {
+		mDefaultCrashHandler = Thread.getDefaultUncaughtExceptionHandler();
+		Thread.setDefaultUncaughtExceptionHandler(this);
+		mContext = context.getApplicationContext();
+	}
+
+
+	/**
+	 * 当程序中有未被捕获的异常，系统会自动调用uncaughtException方法
+	 * @param thread 未被捕获的线程
+	 * @ex 未被捕获的异常
+	 */ 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
