@@ -1,0 +1,2 @@
+# CrashHandler
+自制的异常处理器，让你的Android程序在crash时把异常保存在sd卡，然后上传给开发者查看
